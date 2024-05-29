@@ -55,7 +55,7 @@ Route::middleware('auth')->group(function () {
     // Task 6: /app group within a group
     // Add another group for routes with prefix "app"
     // Put one Route Group code line here below
-    Route::name("app")->group(function () {
+    Route::prefix("app")->group(function () {
 
         // Tasks inside that /app group:
 
@@ -77,8 +77,8 @@ Route::middleware('auth')->group(function () {
     // Assign middleware called "is_admin" to them
     // Put one Route Group code line here below
 
-    Route::middleware("is_admin")->name("admin")->group(function () {
-        // Tasks inside that /admin group:
+    Route::middleware("is_admin")->prefix("admin")->group(function () {
+        // Tasks inside that /admin group:  
 
         // Task 10: point URL /admin/dashboard to a "Single Action" Admin/DashboardController
         // Put one code line here below
